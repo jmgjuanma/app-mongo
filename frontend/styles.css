@@ -1,0 +1,130 @@
+/* Estilos generales */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #0d1117; /* Fondo oscuro similar a GitHub */
+    color: #c9d1d9; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* Encabezado */
+header {
+    background-color: #161b22; /* Color de fondo del encabezado */
+    padding: 16px;
+    border-bottom: 1px solid #21262d; /* Borde inferior */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #f0f6fc; /* Color de texto del encabezado */
+}
+
+/* Contenedor principal */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Formulario */
+#userForm {
+    background-color: #161b22; /* Fondo del formulario */
+    padding: 20px;
+    border: 1px solid #21262d; /* Borde del formulario */
+    border-radius: 6px; /* Bordes redondeados */
+    margin-bottom: 20px;
+}
+
+#userForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #0d1117; /* Fondo de los inputs */
+    border: 1px solid #30363d; /* Borde de los inputs */
+    border-radius: 6px;
+    color: #c9d1d9; /* Color del texto en los inputs */
+    font-size: 14px;
+}
+
+#userForm input::placeholder {
+    color: #6e7681; /* Color del placeholder */
+}
+
+#userForm button {
+    width: 100%;
+    padding: 8px;
+    background-color: #238636; /* Color de fondo del botón (verde similar a GitHub) */
+    border: none;
+    border-radius: 6px;
+    color: #ffffff; /* Color del texto del botón */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+#userForm button:hover {
+    background-color: #2ea043; /* Color al pasar el mouse */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+}
+
+/* Título de la lista de usuarios */
+#userListTitle {
+    cursor: pointer;
+    padding-bottom: 2px;
+    transition: all 0.3s ease; /* Suaviza el cambio de estilo */
+}
+
+#userListTitle.active {
+    border-bottom: 2px solid #238636; /* Subraya cuando está activo */
+}
+
+/* Lista de usuarios */
+#userList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* La lista comienza oculta */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#userList.show {
+    display: block;
+    opacity: 1;
+}
+
+#userList li {
+    background-color: #161b22; /* Fondo de cada elemento de la lista */
+    padding: 12px;
+    border: 1px solid #21262d; /* Borde de cada elemento */
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #c9d1d9; /* Color del texto */
+    display: flex;
+    justify-content: space-between; /* Coloca el botón de eliminar a la derecha */
+}
+
+#userList li:hover {
+    background-color: #21262d; /* Color al pasar el mouse */
+}
+
+.delete-btn {
+    background-color: #d73a49; /* Color de fondo rojo para el botón de eliminar */
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #cf222e; /* Color más oscuro al pasar el mouse */
+}
