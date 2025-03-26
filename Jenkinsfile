@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     // Usa la ruta completa de docker-compose
-                    sh '''
+                    bat '''
                         /usr/bin/docker-compose down || true
                         /usr/bin/docker-compose up --build -d
                     '''
@@ -21,7 +21,7 @@ pipeline {
                 script {
                     sleep(time: 10, unit: 'SECONDS')
                     // Prueba de conexión (ajusta según tu app)
-                    sh 'curl -s http://backend:3000 || echo "App iniciada"'
+                    bat 'curl -s http://backend:3000 || echo "App iniciada"'
                 }
             }
         }
